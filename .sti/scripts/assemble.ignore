@@ -43,6 +43,8 @@ if [ -f "$local_source_dir/pom.xml" ]; then
     exit $err
   fi
 
+  sleep 5000000
+
   echo "Copying built war files into $deploy_dir for later deployment..."
   if [ -d $local_source_dir/target ]; then
     cp $local_source_dir/target/*.war $deploy_dir >& /dev/null
